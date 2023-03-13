@@ -79,16 +79,16 @@ describe("When I click on new bills button", () => {
 
 describe("When I click on eye icon", () => {
     test("Then I should open the modal", () => {
-        document.body.innerHTML = BillsUI({ data: bills });
+        document.body.innerHTML = BillsUI({ data: bills })
 
         const billsList = new Bills({
             document,
             onNavigate: (pathname) => (document.body.innerHTML = ROUTES({ pathname })),
             store,
             localStorageMock,
-        });
+        })
 
-        $.fn.modal = jest.fn(); //mock the modal
+        $.fn.modal = jest.fn() //mock the modal
 
         const eye = screen.getAllByTestId("icon-eye")[0]
         const handleClickIconEye = jest.fn(billsList.handleClickIconEye(eye))
