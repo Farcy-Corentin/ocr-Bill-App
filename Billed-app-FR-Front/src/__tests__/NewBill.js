@@ -55,7 +55,7 @@ describe("Given I am connected as an employee", () => {
             afterEach(() => {
                 jest.clearAllMocks()
             })
-            test("Then I upload a png or jpg/jpeg file", async () => {
+            test("Then I upload a png or png,jpg/jpeg file", async () => {
                 const html = NewBillUI()
                 document.body.innerHTML = html
                 //to-do write assertion
